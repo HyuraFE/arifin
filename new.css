@@ -1,0 +1,258 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to top, #6DA7BD, #0D969C, #0B6F72, #072E33, #05161A);
+}
+
+header {
+    /* background-image: url(img/bgrnd.png); */
+    /* background: linear-gradient(to bottom, #6DA7BD, #0D969C, #0B6F72, #072E33, #05161A); */
+
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    margin: 20px;
+    
+}
+
+.sidebar {
+    flex: 1;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    background: linear-gradient(to top, #6DA7BD, #0D969C, #0B6F72, #072E33, #05161A);
+}
+
+.content {
+    flex: 3;
+    padding: 20px;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* From Uiverse.io by tomaskriegelstein */ 
+button {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    font-family: Poppins;
+    font-weight: 400;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+  
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  button:focus,
+  button:hover {
+    color: rgb(0, 0, 0);
+  }
+  
+  button:focus:after,
+  button:hover:after {
+    width: 100%;
+    right: auto;
+    left: auto; /* Ensure left is auto to override the initial value */
+  }
+  
+  button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -7px;
+    right: auto; /* Start from the right */
+    left: 0; /* Ensure left is auto to override the initial value */
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 500ms;
+    transition-property: width, right;
+  }
+  
+  .svg-icon {
+    width: 0.9em;
+    height: 0.8em;
+    margin-left: 10px;
+    fill: grey;
+    transform: rotate(-45deg);
+    transition: transform 0.5s ease-out;
+  }
+  
+  button:hover .svg-icon {
+    transform: rotate(0deg);
+    fill: rgb(0, 0, 0);
+  }
+  
+  button a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  nav {
+    background-color: #000000;
+    padding: 10px 0;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    margin: 0 20px;    
+}
+nav ul li a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* From Uiverse.io by akshat-patel28 */ 
+.button-container {
+  display: flex;
+  background-color: rgb(0, 0, 0);
+  height: 40px;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+
+.button {
+  outline: 0 !important;
+  border: 0 !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  color: aquamarine;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.wrapped-image {
+  float: left;
+  margin-right: 20px;
+  padding: 5px;
+}
+
+img {
+  margin-right: 2px;
+  margin-top: 2px;
+  margin-left: 2px;
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+}
+
+.gambar {
+  margin-right: 2px;
+  margin-top: 2px;
+  margin-left: 2px;
+
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  padding: 4px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: 0px solid white;
+  border-radius: 5px;
+  
+
+}
+
+/* From Uiverse.io by joe-watson-sbf */ 
+nav ul li .search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+nav ul li .search__input {
+  font-family: inherit;
+  font-size: inherit;
+  background-color: #f4f2f2;
+  border: none;
+  color: #646464;
+  padding: 0.5rem 0.5rem;
+  border-radius: 30px;
+  width: 12em;
+  transition: all ease-in-out .5s;
+  margin-right: -3rem;
+}
+
+nav ul li .search__input:hover, .search__input:focus {
+  box-shadow: 0 0 1em #00000013;
+}
+
+nav ul li .search__input:focus {
+  outline: none;
+  background-color: #f0eeee;
+}
+
+nav ul li .search__input::-webkit-input-placeholder {
+  font-weight: 100;
+  color: #ccc;
+}
+
+nav ul li .search__input:focus + .search__button {
+  background-color: #f0eeee;
+}
+
+nav ul li .search__button {
+  border: none;
+  background-color: #f4f2f2;
+  margin-top: .1em;
+}
+
+nav ul li .search__button:hover {
+  cursor: pointer;
+}
+
+nav ul li .search__icon {
+  height: 1.3em;
+  width: 1.3em;
+  fill: #b4b4b4;
+}
+
+#more {display: none;}
