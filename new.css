@@ -108,7 +108,9 @@ button {
   }
 
   nav {
-    background-color: #000000;
+/*     background-color: #000000; */
+    background: rgb(8,0,36);
+    background: linear-gradient(90deg, rgba(8,0,36,1) 0%, rgba(61,9,121,1) 47%, rgba(0,108,255,1) 100%);
     padding: 10px 0;
 }
 nav ul {
