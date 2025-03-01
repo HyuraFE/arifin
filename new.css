@@ -270,3 +270,7 @@ nav ul li .search__icon {
   transform: translate(-50%, -50%);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
+.kotak a {
+  text-decoration: none;
+}
