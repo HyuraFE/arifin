@@ -261,6 +261,7 @@ nav ul li .search__icon {
 
 .kotak {
   border: 1px solid #ccc;
+  border-radius: 25%;
   padding: 20px;
   background-color: #f9f9f9;
   position: absolute;
