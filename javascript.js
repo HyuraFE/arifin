@@ -29,3 +29,13 @@ function myFunction() {
           moreText.style.display = "inline";
         }
 }
+
+document.getElementById('tombol').addEventListener('click', function(event) {
+  event.preventDefault(); // Mencegah perilaku default dari <a>
+  document.getElementById('kotakBaru').style.display = 'block';
+});
+
+document.getElementById('tutup').addEventListener('click', function(event) {
+  event.preventDefault(); // Mencegah perilaku default dari <a>
+  document.getElementById('kotakBaru').style.display = 'none';
+});
