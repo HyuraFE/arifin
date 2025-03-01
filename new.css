@@ -290,6 +290,10 @@ nav ul li .search__icon {
   color: #fff;
   font-family: "Poppins", sans-serif;
   transition: all 0.3s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .card-client:hover {
