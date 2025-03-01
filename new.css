@@ -277,23 +277,20 @@ nav ul li .search__icon {
 
 /* From Uiverse.io by abrahamcalsin */ 
 .card-client {
-  background: #2cb5a0;
+  background: #2b3130;
   width: 13rem;
   padding-top: 25px;
   padding-bottom: 25px;
   padding-left: 20px;
   padding-right: 20px;
-  border: 4px solid #7cdacc;
+  border: 4px solid #71daca;
   box-shadow: 0 6px 10px rgba(207, 212, 222, 1);
   border-radius: 10px;
   text-align: center;
   color: #fff;
   font-family: "Poppins", sans-serif;
   transition: all 0.3s ease;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: fixed;
 }
 
 .card-client:hover {
