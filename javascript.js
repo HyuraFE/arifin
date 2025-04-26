@@ -1,34 +1,4 @@
-function myFunction() {
-        var dots = document.getElementById("dots");
-        var moreText = document.getElementById("more");
-        var btnText = document.getElementById("myBtn");
 
-        if (dots.style.display === "none") {
-          dots.style.display = "inline";
-          btnText.innerHTML = "Read more";
-          moreText.style.display = "none";
-        } else {
-          dots.style.display = "none";
-          btnText.innerHTML = "Read less";
-          moreText.style.display = "inline";
-        }
-      }
-
-      function myFunction1() {
-        var dots = document.getElementById("dots1");
-        var moreText = document.getElementById("more1");
-        var btnText = document.getElementById("myBtn1");
-
-        if (dots.style.display === "none") {
-          dots.style.display = "inline";
-          btnText.innerHTML = "Read more";
-          moreText.style.display = "none";
-        } else {
-          dots.style.display = "none";
-          btnText.innerHTML = "Read less";
-          moreText.style.display = "inline";
-        }
-}
 
 document.getElementById('tombol').addEventListener('click', function(event) {
   event.preventDefault(); // Mencegah perilaku default dari <a>
@@ -40,9 +10,24 @@ document.getElementById('tutup').addEventListener('click', function(event) {
   document.getElementById('kotakBaru').style.display = 'none';
 });
 
-function toggleReadMore(dotsId, moreId, btn) {
-  const dots = document.getElementById(dotsId);
-  const moreText = document.getElementById(moreId);
+function toggleReadMore(dots1, more1, btn1) {
+  const dots = document.getElementById(dots1);
+  const moreText = document.getElementById(more1);
+
+  if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      moreText.style.display = "none";
+      btn.innerHTML = "Read more";
+  } else {
+      dots.style.display = "none";
+      moreText.style.display = "inline";
+      btn.innerHTML = "Read less";
+  }
+}
+
+function toggleReadMore(dots2, more2, btn2) {
+  const dots = document.getElementById(dots2);
+  const moreText = document.getElementById(more2);
 
   if (dots.style.display === "none") {
       dots.style.display = "inline";
