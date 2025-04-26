@@ -396,3 +396,7 @@ nav ul li .search__icon {
 .content p {
     color: hsl(0, 0%, 100%);
 }
+
+.sidebar p {
+  color: white;
+}
