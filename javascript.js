@@ -39,3 +39,18 @@ document.getElementById('tutup').addEventListener('click', function(event) {
   event.preventDefault(); // Mencegah perilaku default dari <a>
   document.getElementById('kotakBaru').style.display = 'none';
 });
+
+function toggleReadMore(dotsId, moreId, btn) {
+  const dots = document.getElementById(dotsId);
+  const moreText = document.getElementById(moreId);
+
+  if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      moreText.style.display = "none";
+      btn.innerHTML = "Read more";
+  } else {
+      dots.style.display = "none";
+      moreText.style.display = "inline";
+      btn.innerHTML = "Read less";
+  }
+}
