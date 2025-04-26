@@ -392,3 +392,7 @@ nav ul li .search__icon {
   opacity: 1;
   transform: translate(-50%, -130%);
 }
+
+.content p {
+    color: hsl(0, 0%, 100%);
+}
