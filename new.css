@@ -413,7 +413,7 @@ nav ul li .search__icon {
         width: 100%;     
         height: 50px;   
         font-size: 24px; 
-      text-align: right;  
+        text-align: right;  
         margin-bottom: 10px;    
         padding: 10px;     
         border: 1px solid #ccc;  
@@ -437,10 +437,6 @@ nav ul li .search__icon {
       transition: background 0.2s; 
     } 
  
-    .tombol button:hover { 
-      background: #ccc; 
-    } 
- 
     .tombol .operator {       
         background: #f9a825;       
         color: white; 
@@ -458,4 +454,5 @@ nav ul li .search__icon {
     .tombol .equals:hover { 
       background: #2e7d32; 
     } 
+
 
