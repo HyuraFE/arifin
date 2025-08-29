@@ -181,7 +181,34 @@
         <div class="sidebar">
             <h2>Visual</h2>
             <img src="img/1728871356124.png" style="height: 150px; width: 200px;" >
-            
+            <div class="kalkulator"> 
+    <input type="text" class="layar" id="layar" disabled> 
+    <div class="tombol"> 
+      <button onclick="clearLayar()">C</button> 
+      <button onclick="hapusSatu()">←</button> 
+      <button onclick="tambahAngka('%')">%</button> 
+      <button class="operator" onclick="tambahAngka('/')">/</button> 
+ 
+      <button onclick="tambahAngka('7')">7</button> 
+      <button onclick="tambahAngka('8')">8</button> 
+      <button onclick="tambahAngka('9')">9</button> 
+      <button class="operator" onclick="tambahAngka('*')">*</button> 
+ 
+      <button onclick="tambahAngka('4')">4</button> 
+      <button onclick="tambahAngka('5')">5</button> 
+      <button onclick="tambahAngka('6')">6</button> 
+      <button class="operator" onclick="tambahAngka('-')">-</button> 
+ 
+      <button onclick="tambahAngka('1')">1</button> 
+      <button onclick="tambahAngka('2')">2</button> 
+      <button onclick="tambahAngka('3')">3</button> 
+      <button class="operator" onclick="tambahAngka('+')">+</button> 
+ 
+      <button onclick="tambahAngka('0')">0</button> 
+      <button onclick="tambahAngka('.')">.</button> 
+      <button class="equals" onclick="hitung()">=</button> 
+    </div> 
+  </div> 
         </div>
     </div>
     <footer>
@@ -277,3 +304,4 @@
     <script src="javascript.js"></script>
 </body>
 </html>
+
