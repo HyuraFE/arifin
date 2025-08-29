@@ -429,7 +429,8 @@ nav ul li .search__icon {
     .tombol button {       
         padding: 15px;      
         font-size: 18px;      
-        border: none;   
+        border: none;
+        color: black;
         border-radius: 5px;    
         background: #eee;     
         cursor: pointer; 
@@ -457,3 +458,4 @@ nav ul li .search__icon {
     .tombol .equals:hover { 
       background: #2e7d32; 
     } 
+
