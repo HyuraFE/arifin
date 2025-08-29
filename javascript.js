@@ -39,3 +39,24 @@ function toggleReadMore(dots2, more2, btn2) {
       btn.innerHTML = "Read less";
   }
 }
+
+// kalkulator jawascript
+let layar = document.getElementById("layar"); 
+ 
+    function tambahAngka(nilai) { 
+      layar.value += nilai; 
+    } 
+ 
+    function clearLayar() {       layar.value = ""; 
+    } 
+ 
+    function hapusSatu() { 
+      layar.value = layar.value.slice(0, -1); 
+    } 
+ 
+    function hitung() { 
+      try { 
+        layar.value = eval(layar.value); 
+      } catch {         layar.value = "Error!"; 
+      } 
+    } 
