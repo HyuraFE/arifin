@@ -16,22 +16,23 @@ header {
 
 .container {
     display: flex;
-    margin: 20px;
+    margin: 20px 0;
     
 }
 
 .sidebar {
-    flex: 1;
+    flex: none; /* Hapus flex untuk mengatur lebar secara eksplisit */
+    width: 250px; /* Contoh lebar tetap untuk sidebar */
     background: #f4f4f4;
     padding: 20px;
     border-radius: 8px;
     background: rgb(58, 57, 59);
 }
-
 .content {
-    flex: 3;
+    flex: 1; /* Biarkan content mengisi sisa ruang */
     padding: 20px;
 }
+
 
 footer {
     background: #333;
@@ -454,5 +455,6 @@ nav ul li .search__icon {
     .tombol .equals:hover { 
       background: #2e7d32; 
     } 
+
 
 
