@@ -1,1 +1,574 @@
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="A Normal Website" />
+      <meta property="og:description" content="Informatika" />
+      <meta property="og:image" content="https://i.imgur.com/MDIrgnQ.png" />
+      <meta property="og:url" content="https://www.pylexia.my.id" />
+    <title>Arifin XI-2</title>
+    <link rel="icon" type="image/x-icon" href="img/IMG_20250219_085112.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: rgb(82, 80, 85);
+}
+
+header {
+    /* background-image: url(img/bgrnd.png); */
+    /* background: linear-gradient(to bottom, #6DA7BD, #0D969C, #0B6F72, #072E33, #05161A); */
+
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    margin: 20px;
+
+}
+
+.sidebar {
+    flex: 1;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    background: rgb(58, 57, 59);
+}
+
+.content {
+    flex: 3;
+    padding: 20px;
+}
+
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* From Uiverse.io by tomaskriegelstein */ 
+button {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    font-family: Poppins;
+    font-weight: 400;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  button:focus,
+  button:hover {
+    color: rgb(0, 0, 0);
+  }
+
+  button:focus:after,
+  button:hover:after {
+    width: 100%;
+    right: auto;
+    left: auto; /* Ensure left is auto to override the initial value */
+  }
+
+  button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -7px;
+    right: auto; /* Start from the right */
+    left: 0; /* Ensure left is auto to override the initial value */
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 500ms;
+    transition-property: width, right;
+  }
+
+  .svg-icon {
+    width: 0.9em;
+    height: 0.8em;
+    margin-left: 10px;
+    fill: grey;
+    transform: rotate(-45deg);
+    transition: transform 0.5s ease-out;
+  }
+
+  button:hover .svg-icon {
+    transform: rotate(0deg);
+    fill: rgb(0, 0, 0);
+  }
+
+  button a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  nav {
+/* background-color: #000000; */
+    background: rgb(8,0,36);
+    background: linear-gradient(90deg, rgba(8,0,36,1) 0%, rgba(129,139,170,1) 47%, rgba(127,145,168,1) 100%);
+    padding: 10px 0;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    margin: 0 20px;    
+}
+nav ul li a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* From Uiverse.io by akshat-patel28 */ 
+.button-container {
+  display: flex;
+  background-color: rgb(0, 0, 0);
+  height: 40px;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.button {
+  outline: 0 !important;
+  border: 0 !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  color: aquamarine;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.wrapped-image {
+  float: left;
+  margin-right: 20px;
+  padding: 5px;
+}
+
+img {
+  margin-right: 2px;
+  margin-top: 2px;
+  margin-left: 2px;
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+}
+
+.gambar {
+  margin-right: 2px;
+  margin-top: 2px;
+  margin-left: 2px;
+
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  padding: 4px;
+  background-color: rgb(130, 127, 133);
+  color: white;
+  border: 0px solid white;
+  border-radius: 5px;
+
+
+}
+
+/* From Uiverse.io by joe-watson-sbf */ 
+nav ul li .search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+nav ul li .search__input {
+  font-family: inherit;
+  font-size: inherit;
+  background-color: #f4f2f2;
+  border: none;
+  color: #646464;
+  padding: 0.5rem 0.5rem;
+  border-radius: 30px;
+  width: 12em;
+  transition: all ease-in-out .5s;
+  margin-right: -3rem;
+}
+
+nav ul li .search__input:hover, .search__input:focus {
+  box-shadow: 0 0 1em #00000013;
+}
+
+nav ul li .search__input:focus {
+  outline: none;
+  background-color: #f0eeee;
+}
+
+nav ul li .search__input::-webkit-input-placeholder {
+  font-weight: 100;
+  color: #ccc;
+}
+
+nav ul li .search__input:focus + .search__button {
+  background-color: #f0eeee;
+}
+
+nav ul li .search__button {
+  border: none;
+  background-color: #f4f2f2;
+  margin-top: .1em;
+}
+
+nav ul li .search__button:hover {
+  cursor: pointer;
+}
+
+nav ul li .search__icon {
+  height: 1.3em;
+  width: 1.3em;
+  fill: #b4b4b4;
+}
+
+#more {display: none;}
+
+/* From Uiverse.io by abrahamcalsin */ 
+.card-client {
+  background: #2b3130;
+  width: 13rem;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 4px solid #71daca;
+  box-shadow: 0 6px 10px rgba(207, 212, 222, 1);
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
+
+.card-client:hover {
+  transform: translateY(-10px);
+}
+
+.user-picture {
+  overflow: hidden;
+  object-fit: cover;
+  width: 5rem;
+  height: 5rem;
+  border: 4px solid #7cdacc;
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.user-picture svg {
+  width: 2.5rem;
+  fill: currentColor;
+}
+
+.name-client {
+  margin: 0;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.name-client span {
+  display: block;
+  font-weight: 200;
+  font-size: 16px;
+}
+
+.social-media:before {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 20px 0;
+  background: #7cdacc;
+}
+
+.social-media a {
+  position: relative;
+  margin-right: 15px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.social-media a:last-child {
+  margin-right: 0;
+}
+
+.social-media a svg {
+  width: 1.1rem;
+  fill: currentColor;
+}
+
+/*-- Tooltip Social Media --*/
+.tooltip-social {
+  background: #262626;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  padding: 0.5rem 0.4rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -90%);
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+
+.tooltip-social:after {
+  content: " ";
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  border: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: transparent;
+  transform: translate(-50%, 100%);
+}
+
+.social-media a .tooltip-social:after {
+  border-top-color: #262626;
+}
+
+.social-media a:hover .tooltip-social {
+  opacity: 1;
+  transform: translate(-50%, -130%);
+}
+
+.content p {
+    color: hsl(0, 0%, 100%);
+}
+
+.sidebar p {
+  color: white;
+
+}
+.kalkulator {     
+    background: #fff; 
+    padding: 20px;     
+    border-radius: 10px;   
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+      width: 260px; 
+    } 
+
+    .layar {     
+        width: 100%;     
+        height: 50px;   
+        font-size: 24px; 
+        text-align: right;  
+        margin-bottom: 10px;    
+        padding: 10px;     
+        border: 1px solid #ccc;  
+        border-radius: 5px; 
+    } 
+
+    .tombol {     
+        display: grid; 
+        grid-template-columns: repeat(4, 1fr); 
+      gap: 10px; 
+    } 
+
+    .tombol button {       
+        padding: 15px;      
+        font-size: 18px;      
+        border: none;
+        color: black;
+        border-radius: 5px;    
+        background: #eee;     
+        cursor: pointer; 
+      transition: background 0.2s; 
+    } 
+
+    .tombol .operator {       
+        background: #f9a825;       
+        color: white; 
+    } 
+
+    .tombol .operator:hover { 
+      background: #f57f17; 
+    } 
+
+    .tombol .equals {       
+        background: #43a047; 
+        color: white; 
+    } 
+
+    .tombol .equals:hover { 
+      background: #2e7d32; 
+    } 
+    /* Style for the digital clock */
+    .clock-container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.5);
+      text-align: center;
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+    .clock {
+      color: #00ffcc;
+      font-size: 32px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-shadow: 0 0 10px #00ffcc;
+    }
+    .date {
+      color: #ffffff;
+      margin-top: 5px;
+      font-size: 16px;
+      letter-spacing: 1px;
+      text-shadow: 0 0 5px #fff;
+    }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Astralization</h1>
+
+    </header>
+    <nav>
+        <ul>
+            <li> <a href="#">Home</a></li>
+            <li> <a href="#">About</a></li>
+            <li> <a href="#">Service</a></li>
+            <li> <a href="#" id="tombol">Contact</a></li>
+            <li><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Profile
+          </button></li>
+          <li><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-galeri">
+            Gallery
+          </button></li>
+            <li>
+              <div class="search">
+                  <input type="text" class="search__input" placeholder="Search">
+                  <button class="search__button">
+                      <svg class="search__icon" aria-hidden="true" viewBox="0 0 24 24">
+                          <g>
+                              <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+                          </g>
+                      </svg>
+                  </button>
+              </div>
+            </li>
+            <li> 
+              <a href="https://facebook.com"><i class="fa-brands fa-square-facebook fa-2x"></i></a>
+              <a href="https://tiktok.com"><i class="fa-brands fa-tiktok fa-2x"></i></a>
+              <a href="https://github.com/HyuraFE"><i class="fa-brands fa-github fa-2x"></i></a>
+          </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+      <div class="card-client" id="kotakBaru" style="display: none;">
+        <div class="user-picture">
+            <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                <path d="M224 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 224 256zM274.7 304H173.3C77.61 304 0 381.6 0 477.3c0 19.14 15.52 34.67 34.66 34.67h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304z"></path>
+            </svg>
+        </div>
+        <p class="name-client"> Arifin
+            <span>CEO of Astralization
+            </span>
+        </p>
+        <div class="social-media">
+            <a href="https://wa.me/62">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                <path d="M25 2C12.309534 2 2 12.309534 2 25C2 29.079097 3.1186875 32.88588 4.984375 36.208984L2.0371094 46.730469A1.0001 1.0001 0 0 0 3.2402344 47.970703L14.210938 45.251953C17.434629 46.972929 21.092591 48 25 48C37.690466 48 48 37.690466 48 25C48 12.309534 37.690466 2 25 2zM25 4C36.609534 4 46 13.390466 46 25C46 36.609534 36.609534 46 25 46C21.278025 46 17.792121 45.029635 14.761719 43.333984A1.0001 1.0001 0 0 0 14.033203 43.236328L4.4257812 45.617188L7.0019531 36.425781A1.0001 1.0001 0 0 0 6.9023438 35.646484C5.0606869 32.523592 4 28.890107 4 25C4 13.390466 13.390466 4 25 4zM16.642578 13C16.001539 13 15.086045 13.23849 14.333984 14.048828C13.882268 14.535548 12 16.369511 12 19.59375C12 22.955271 14.331391 25.855848 14.613281 26.228516L14.615234 26.228516L14.615234 26.230469C14.588494 26.195329 14.973031 26.752191 15.486328 27.419922C15.999626 28.087653 16.717405 28.96464 17.619141 29.914062C19.422612 31.812909 21.958282 34.007419 25.105469 35.349609C26.554789 35.966779 27.698179 36.339417 28.564453 36.611328C30.169845 37.115426 31.632073 37.038799 32.730469 36.876953C33.55263 36.755876 34.456878 36.361114 35.351562 35.794922C36.246248 35.22873 37.12309 34.524722 37.509766 33.455078C37.786772 32.688244 37.927591 31.979598 37.978516 31.396484C38.003976 31.104927 38.007211 30.847602 37.988281 30.609375C37.969311 30.371148 37.989581 30.188664 37.767578 29.824219C37.302009 29.059804 36.774753 29.039853 36.224609 28.767578C35.918939 28.616297 35.048661 28.191329 34.175781 27.775391C33.303883 27.35992 32.54892 26.991953 32.083984 26.826172C31.790239 26.720488 31.431556 26.568352 30.914062 26.626953C30.396569 26.685553 29.88546 27.058933 29.587891 27.5C29.305837 27.918069 28.170387 29.258349 27.824219 29.652344C27.819619 29.649544 27.849659 29.663383 27.712891 29.595703C27.284761 29.383815 26.761157 29.203652 25.986328 28.794922C25.2115 28.386192 24.242255 27.782635 23.181641 26.847656L23.181641 26.845703C21.603029 25.455949 20.497272 23.711106 20.148438 23.125C20.171937 23.09704 20.145643 23.130901 20.195312 23.082031L20.197266 23.080078C20.553781 22.728924 20.869739 22.309521 21.136719 22.001953C21.515257 21.565866 21.68231 21.181437 21.863281 20.822266C22.223954 20.10644 22.02313 19.318742 21.814453 18.904297L21.814453 18.902344C21.828863 18.931014 21.701572 18.650157 21.564453 18.326172C21.426943 18.001263 21.251663 17.580039 21.064453 17.130859C20.690033 16.232501 20.272027 15.224912 20.023438 14.634766L20.023438 14.632812C19.730591 13.937684 19.334395 13.436908 18.816406 13.195312C18.298417 12.953717 17.840778 13.022402 17.822266 13.021484L17.820312 13.021484C17.450668 13.004432 17.045038 13 16.642578 13zM16.642578 15C17.028118 15 17.408214 15.004701 17.726562 15.019531C18.054056 15.035851 18.033687 15.037192 17.970703 15.007812C17.906713 14.977972 17.993533 14.968282 18.179688 15.410156C18.423098 15.98801 18.84317 16.999249 19.21875 17.900391C19.40654 18.350961 19.582292 18.773816 19.722656 19.105469C19.863021 19.437122 19.939077 19.622295 20.027344 19.798828L20.027344 19.800781L20.029297 19.802734C20.115837 19.973483 20.108185 19.864164 20.078125 19.923828C19.867096 20.342656 19.838461 20.445493 19.625 20.691406C19.29998 21.065838 18.968453 21.483404 18.792969 21.65625C18.639439 21.80707 18.36242 22.042032 18.189453 22.501953C18.016221 22.962578 18.097073 23.59457 18.375 24.066406C18.745032 24.6946 19.964406 26.679307 21.859375 28.347656C23.05276 29.399678 24.164563 30.095933 25.052734 30.564453C25.940906 31.032973 26.664301 31.306607 26.826172 31.386719C27.210549 31.576953 27.630655 31.72467 28.119141 31.666016C28.607627 31.607366 29.02878 31.310979 29.296875 31.007812L29.298828 31.005859C29.655629 30.601347 30.715848 29.390728 31.224609 28.644531C31.246169 28.652131 31.239109 28.646231 31.408203 28.707031L31.408203 28.708984L31.410156 28.708984C31.487356 28.736474 32.454286 29.169267 33.316406 29.580078C34.178526 29.990889 35.053561 30.417875 35.337891 30.558594C35.748225 30.761674 35.942113 30.893881 35.992188 30.894531C35.995572 30.982516 35.998992 31.07786 35.986328 31.222656C35.951258 31.624292 35.8439 32.180225 35.628906 32.775391C35.523582 33.066746 34.975018 33.667661 34.283203 34.105469C33.591388 34.543277 32.749338 34.852514 32.4375 34.898438C31.499896 35.036591 30.386672 35.087027 29.164062 34.703125C28.316336 34.437036 27.259305 34.092596 25.890625 33.509766C23.114812 32.325956 20.755591 30.311513 19.070312 28.537109C18.227674 27.649908 17.552562 26.824019 17.072266 26.199219C16.592866 25.575584 16.383528 25.251054 16.208984 25.021484L16.207031 25.019531C15.897202 24.609805 14 21.970851 14 19.59375C14 17.077989 15.168497 16.091436 15.800781 15.410156C16.132721 15.052495 16.495617 15 16.642578 15z"></path>
+                </svg>
+                <span class="tooltip-social">Whatsapp</span>
+            </a>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                </svg>
+                <span class="tooltip-social">Instagram</span>
+            </a>
+            <a href="https://tiktok.com/@pylxen">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                <path d="M41,4H9C6.243,4,4,6.243,4,9v32c0,2.757,2.243,5,5,5h32c2.757,0,5-2.243,5-5V9C46,6.243,43.757,4,41,4z M37.006,22.323 c-0.227,0.021-0.457,0.035-0.69,0.035c-2.623,0-4.928-1.349-6.269-3.388c0,5.349,0,11.435,0,11.537c0,4.709-3.818,8.527-8.527,8.527 s-8.527-3.818-8.527-8.527s3.818-8.527,8.527-8.527c0.178,0,0.352,0.016,0.527,0.027v4.202c-0.175-0.021-0.347-0.053-0.527-0.053 c-2.404,0-4.352,1.948-4.352,4.352s1.948,4.352,4.352,4.352s4.527-1.894,4.527-4.298c0-0.095,0.042-19.594,0.042-19.594h4.016 c0.378,3.591,3.277,6.425,6.901,6.685V22.323z"></path>
+                </svg>
+                <span class="tooltip-social">Tiktok</span>
+            </a>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
+                </svg>
+                <span class="tooltip-social">LinkedIn</span>
+            </a>
+            <a href="#" id="tutup">Tutup</a>
+        </div>
+      </div>
+        <div class="sidebar">
+            <h2>Referensi</h2>
+            <button><a href="https://honkai-star-rail.fandom.com/wiki/Stellaron">
+            <span>Honkai StarRail Wiki</span>
+            <span class="icon">
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                class="svg-icon"
+                >
+                <path
+                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+                ></path>
+                </svg>
+            </span></a>
+            </butt 
