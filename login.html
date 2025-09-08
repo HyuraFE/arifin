@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login with Username</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+    <div class="bg-white rounded-lg shadow-2xl p-8 max-w-sm w-full">
+        <h2 class="text-3xl font-bold text-gray-800 text-center mb-6">Welcome Back</h2>
+        <p class="text-gray-500 text-center mb-8">Log in with your username</p>
+
+        <form id="loginForm" class="space-y-6">
+            <div>
+                <label for="username" class="block text-sm font-medium text-gray-700 mb-1">Username</label>
+                <input type="text" id="username" name="username" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="your-username" required>
+            </div>
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                <input type="password" id="password" name="password" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="••••••••" required>
+            </div>
+            <div id="message-box" class="hidden text-center py-2 px-4 rounded-lg text-sm transition-all duration-300"></div>
+            <div>
+                <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-2.5 rounded-lg hover:bg-blue-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                    Log In
+                </button>
+            </div>
+        </form>
+
+        <p class="mt-6 text-center text-gray-500 text-sm">
+            Don't have an account? <a href="#" class="text-blue-600 hover:text-blue-700 font-medium">Sign up</a>
+        </p>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Hardcoded user accounts for demonstration
+            const users = [
+                { username: 'arifin', password: '12345' },
+                { username: 'pylexia', password: 'lexia123' }
+            ];
+
+            const usernameInput = document.getElementById('username').value;
+            const passwordInput = document.getElementById('password').value;
+            const messageBox = document.getElementById('message-box');
+
+            // Find a matching user in the array
+            const foundUser = users.find(user => user.username === usernameInput && user.password === passwordInput);
+
+            if (foundUser) {
+                // Successful login
+                displayMessage('Login successful! Redirecting to homepage...', 'bg-green-100 text-green-700');
+                
+                // Redirect to the homepage after a short delay
+                setTimeout(() => {
+                    window.location.href = 'homepage.html';
+                }, 1500); // 1.5 second delay
+            } else {
+                // Failed login
+                displayMessage('Invalid username or password.', 'bg-red-100 text-red-700');
+            }
+        });
+
+        function displayMessage(message, colorClass) {
+            const messageBox = document.getElementById('message-box');
+            messageBox.textContent = message;
+            messageBox.className = colorClass + ' text-center py-2 px-4 rounded-lg text-sm transition-all duration-300';
+            messageBox.classList.remove('hidden');
+
+            setTimeout(() => {
+                messageBox.classList.add('hidden');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
+
