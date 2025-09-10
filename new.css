@@ -5,10 +5,14 @@ body {
     background: rgb(82, 80, 85);
 }
 
+.carousel-container {
+  max-width: 500px;   /* You can adjust this value */
+  margin: 0 auto;     /* Centers the carousel */
+}
+
 .carousel-image {
-    object-fit: cover;
-    height: 400px; /* or any height you prefer */
-    width: 100%;
+  height: 250px;      /* You can adjust this value */
+  object-fit: cover;  /* Keeps image aspect ratio and crops if needed */
 }
 
 header {
