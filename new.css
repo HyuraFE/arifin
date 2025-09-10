@@ -5,6 +5,12 @@ body {
     background: rgb(82, 80, 85);
 }
 
+.carousel-image {
+    object-fit: cover;
+    height: 400px; /* or any height you prefer */
+    width: 100%;
+}
+
 header {
     /* background-image: url(img/bgrnd.png); */
     /* background: linear-gradient(to bottom, #6DA7BD, #0D969C, #0B6F72, #072E33, #05161A); */
